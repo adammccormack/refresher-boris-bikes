@@ -1,4 +1,4 @@
-A project to refresh my memory on OOP fundamentals by creating a boris bike system in ruby.
+A project to refresh my memory on OOP fundamentals by creating a boris bike app in ruby.
 
 
 
