@@ -3,6 +3,8 @@ require 'bike'
 
 describe DockingStation do
   let(:docking_station) { DockingStation.new }
+  let(:bike) {Bike.new}
+
 
     it { is_expected.to respond_to :release_bike }
 
@@ -38,6 +40,22 @@ describe DockingStation do
       docking_station.dock(bike)
 
       expect(docking_station.release_bike).to eq(bike)
+    end
+  end
+
+  describe '#default_capacity' do
+    it 'has a default capacity' do
+      expect(docking_station.capacity).to eq(20)
+    end
+  end
+
+  describe '#change_capacity' do
+    it 'allows change of bike capacity' do
+      bike = Bike.new
+      
+      docking_station = DockingStation.new(30)
+
+      expect(docking_station.capacity).to eq(30)
     end
   end
 end
